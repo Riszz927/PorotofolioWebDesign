@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Portofolio Elfariz Maulana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<video class="video-bg" autoplay muted loop playsinline>
+    <source src="bg.mp4" type="video/mp4">
+</video>
+<div class="glow glow-1"></div>
+<div class="glow glow-2"></div>
+
+<div class="container">
+
+    <section class="hero reveal">
+        <img src="foto.jpg" alt="Foto Diri" class="profile-img">
+        <h1>Elfariz Maulana</h1>
+        <p class="info">Kelas XE-1 | Jurusan Web Design</p>
+
+        <p class="desc">
+            Saya adalah seorang pelajar biasa yang duduk dikelas X lebih tepatnya kelas XE-1. 
+            Saya orangnya ramah sama humble. Kalau soal koding-koding gini jelas tentu bukan ahlinya 
+            yang penting mau belajar sedikit sedikit lah ya. Julukannya kalau di kelas cukup seram "PAK DOSEN"
+        </p>
+    </section>
+
+    <!-- HOBI -->
+    <section class="section reveal">
+        <h2>Hobi</h2>
+        <div class="hobi">
+            <span>Membaca</span>
+            <span>Belajar</span>
+        </div>
+    </section>
+
+    <!-- SOSIAL MEDIA -->
+    <section class="section reveal">
+        <h2>Sosial Media</h2>
+
+        <div class="social-grid">
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/elfariz_m" target="_blank" class="social-card ig">
+        <svg viewBox="0 0 24 24">
+            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm0 7.4A2.9 2.9 0 1 1 14.9 12 2.9 2.9 0 0 1 12 14.9zM17.8 6.2a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+        </svg>
+        <span>Instagram</span>
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@kotori927" target="_blank" class="social-card tiktok">
+        <svg viewBox="0 0 24 24">
+            <path d="M16 1c.6 2.6 2.4 4.7 5 5v4c-2 0-3.9-.6-5.5-1.7V15a6 6 0 1 1-6-6c.4 0 .7 0 1 .1v4.1a2.5 2.5 0 1 0 2.5 2.5V1h3z"/>
+        </svg>
+        <span>TikTok</span>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/6281393108104" target="_blank" class="social-card whatsapp">
+        <svg viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 0 0-8.7 15l-1.3 5 5.1-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-5.5c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8.9-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.3.2-.5.6-1 .1-.1.1-.3 0-.4s-.6-1.4-.8-1.9c-.2-.4-.4-.3-.6-.3h-.5c-.2 0-.4.1-.6.3s-.8.8-.8 2 .8 2.4.9 2.5a9.4 9.4 0 0 0 3.6 3.4c.5.2.9.4 1.2.5.5.2.9.2 1.3.1.4-.1 1.5-.6 1.7-1.2s.2-1 .1-1.1-.2-.2-.4-.3z"/>
+        </svg>
+        <span>WhatsApp</span>
+    </a>
+</div>
+
+    </section>
+
+    <footer class="reveal">
+        © 2026 • Portofolio Web Design
+    </footer>
+
+</div>
+
+<script>
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+        reveals.forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight - 120) {
+                el.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

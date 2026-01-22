@@ -1,0 +1,250 @@
+.video-bg {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+    opacity: 0.18;
+    filter: blur(1px); /* blur dikurangi */
+}
+
+
+/* overlay gelap biar teks jelas */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(
+        circle at top,
+        rgba(18,26,58,0.9),
+        rgba(11,15,26,0.95)
+    );
+    z-index: -1;
+}
+
+:root {
+    --dark-bg: #0b0f1a;
+    --card-bg: #11162a;
+    --glow-blue: #4facfe;
+    --glow-purple: #a855f7;
+    --text-main: #ffffff;
+    --text-soft: #cbd5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #121a3a, var(--dark-bg));
+    color: var(--text-main);
+    min-height: 200vh;
+}
+
+/* glow dekorasi */
+.glow {
+    position: fixed;
+    width: 260px;
+    height: 260px;
+    filter: blur(100px);
+    opacity: 0.18;
+    z-index: -1;
+}
+
+.glow-1 { background: var(--glow-blue); top: 10%; left: 5%; }
+.glow-2 { background: var(--glow-purple); bottom: 10%; right: 5%; }
+
+/* container diperbesar */
+.container {
+    width: 1000px;
+    max-width: 92%;
+    margin: 120px auto;
+    padding: 70px;
+    background: var(--card-bg);
+    border-radius: 26px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+/* hero */
+.hero { text-align: center; margin-bottom: 80px; }
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid transparent;
+    background:
+        linear-gradient(var(--card-bg), var(--card-bg)) padding-box,
+        linear-gradient(135deg, var(--glow-blue), var(--glow-purple)) border-box;
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: 36px;
+    background: linear-gradient(90deg, var(--glow-blue), var(--glow-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.info {
+    color: var(--text-soft);
+    margin: 10px 0 22px;
+}
+
+.desc {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+    color: #dde3ff;
+}
+
+/* section */
+.section { margin-bottom: 90px; text-align: center; }
+
+.section h2 {
+    font-size: 24px;
+    margin-bottom: 26px;
+}
+
+.section h2::after {
+    content: "";
+    width: 70px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--glow-blue), var(--glow-purple));
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 10px;
+}
+
+/* hobi */
+.hobi {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.hobi span {
+    padding: 10px 22px;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(79,172,254,0.25);
+}
+
+/* sosial media UI */
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.social-card {
+    padding: 26px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.15);
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: 0.35s ease;
+}
+
+.social-card svg {
+    width: 34px;
+    height: 34px;
+    fill: white;
+}
+
+.social-card span {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.social-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(79,172,254,0.4);
+}
+
+.ig:hover { background: linear-gradient(135deg, #f58529, #dd2a7b, #8134af); }
+.tiktok:hover { background: linear-gradient(135deg, #25f4ee, #000000, #fe2c55); }
+.whatsapp:hover { background: #25d366; }
+
+
+/* footer */
+footer {
+    text-align: center;
+    font-size: 13px;
+    color: #9aa4ff;
+}
+
+/* scroll animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.9s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .video-bg {
+        object-position: center;
+        opacity: 0.15;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+        padding: 40px 24px;
+        margin: 80px auto;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .desc {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .section {
+        margin-bottom: 60px;
+    }
+
+    .hobi {
+        gap: 10px;
+    }
+
+    .hobi span {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-card {
+        justify-content: center;
+    }
+}
